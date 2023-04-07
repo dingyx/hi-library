@@ -1,11 +1,19 @@
+# Android 项目架构
+
+## 通用UI组件
+
+`hilibrary`  
+
+### HiLog
+
+通用日志打印框架	 `com.link.hi.library.log`
+
+1. MyApplication 初始化
+2. HiLogDemoActivity 使用
+
+```kotlin
 package com.link.hi.library.app.demo
-
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.view.View
-import com.link.hi.library.app.R
-import com.link.hi.library.log.*
-
+    
 class HiLogDemoActivity : AppCompatActivity() {
 
     // App可视化打印
@@ -14,7 +22,7 @@ class HiLogDemoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hi_log_demo)
-
+        
         // 初始化 Printter
         viewPrinter = HiViewPrinter(this)
 
@@ -48,3 +56,5 @@ class HiLogDemoActivity : AppCompatActivity() {
         HiLog.a("123456")
     }
 }
+```
+
